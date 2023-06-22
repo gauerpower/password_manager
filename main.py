@@ -41,7 +41,7 @@ def find_pw():
         json_dict = json.load(read_handler)
         for website_name, info_dict in json_dict.items():
             if website_input.get().lower().strip() == website_name.lower().strip():
-                messagebox.showinfo(message = f"Account on {website_name.title()}:\nUsername: {info_dict['username']}\nPassword: {info_dict['password']}")
+                messagebox.showinfo(message = f"Account on {website_name.title()}:\nUsername: {info_dict['username']}\nPassword: {info_dict['password']}\n(Copy and paste these before you close the window)")
                 return
         messagebox.showinfo(message = "No info saved for that website.\nDid you spell it correctly?")
 
